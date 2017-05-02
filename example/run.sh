@@ -12,7 +12,7 @@ do
          rm Dockerfile && \
          rm -rf node/template && \
          # Copy in required files
-         cp ../../docker/Dockerfile . && \
+         cp ../../quorum/Dockerfile . && \
          cp -rp ../../template node/ && \
          # Run docker container
          docker build -t $IMG_NAME . && \
