@@ -9,7 +9,7 @@ do
         IMG_NAME="quorum-$DIR_NAME"
          # Clean up existing run
         (cd "$d" && \
-         rm Dockerfile && \
+         rm -f Dockerfile && \
          rm -rf node/template && \
          # Copy in required files
          cp ../../quorum/Dockerfile . && \
