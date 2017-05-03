@@ -1,7 +1,5 @@
 #!/bin/bash
 
-COUNT=0
-WORKING_DIR=$PWD
 for d in `find . -maxdepth 1 ! -path . -type d`
 do
     if [[ -d $d ]]; then
