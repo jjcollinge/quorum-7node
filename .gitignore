@@ -1,5 +1,4 @@
-.vscode
-*appsettings.json
+appsettings.json
 example/node*/node/template/
 example/node*/Dockerfile
 data
