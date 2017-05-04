@@ -1,3 +1,5 @@
 example/node*/node/template/
 example/node*/Dockerfile
 data
+cakeshop/*.war
+cakeshop/*.log
