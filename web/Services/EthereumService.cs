@@ -26,7 +26,7 @@ namespace web.Services
 
         public EthereumService(IOptions<EthereumSettings> config)
         {
-            _web3 = new Web3("http://192.168.0.29:8545");
+            _web3 = new Web3("http://localhost:8545");
             _accountAddress = config.Value.EthereumAccount;
             _password = config.Value.EthereumPassword;
             _storageAccount = config.Value.StorageAccount;
@@ -89,6 +89,7 @@ namespace web.Services
             }
             catch (Exception exc)
             {
+                Console.WriteLine(exc.Message);
                 return false;
             }
             return false;

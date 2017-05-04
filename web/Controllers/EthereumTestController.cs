@@ -22,6 +22,7 @@ namespace EthereumStart.Controllers
         [Route("getBalance/{walletAddress}")]
         public async Task<decimal> GetBalance([FromRoute]string walletAddress)
         {
+            Console.WriteLine("Getting balance");
             return await service.GetBalance(walletAddress);
         }
         [HttpGet]
