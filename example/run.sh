@@ -21,4 +21,8 @@ do
     # Run docker container
     docker build -t $IMG_NAME . && \
     docker run -d --net=host $IMG_NAME)
+    # Allow bootnode to start before starting the rest of the nodes
+    if [[ $DIR_NAME == "node1" ]]; then
+        sleep 15
+    fi
 done
