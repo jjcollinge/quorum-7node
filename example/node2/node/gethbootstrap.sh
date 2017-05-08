@@ -1,2 +1,0 @@
-#!/bin/bash
-PRIVATE_CONFIG=node.conf nohup geth --datadir tempdata/datadir --bootnodes $BOOTNODE_ENODE --networkid $GETH_NETWORK_ID --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum --rpcport $RPC_PORT --port $GETH_PORT --voteaccount 0x0fbdc686b912d7722dc86510934589e0aaf3b55a --votepassword "" --blockmakeraccount 0xca843569e3427144cead5e4d5999a3d0ccf92b8e --blockmakerpassword "" --singleblockmaker --minblocktime 2 --maxblocktime 5 2>> tempdata/logs/geth.log &

@@ -1,19 +1,24 @@
-#!/bin/bash
+#!/bin/bash -x
 
-for d in `find . -maxdepth 1 ! -path . -type d`
+# Clean up existing run
+rm -rf quorum-node
+
+# Fetch quorum node docker file
+git clone https://github.com/jjcollinge/quorum-node.git
+
+# For each sub directory
+for d in `find . -maxdepth 1 -not -path . -type d -not -name quorum-node`
 do
-    if [[ -d $d ]]; then
-        DIR_NAME=`echo $d | cut -c3-`
-        IMG_NAME="quorum-$DIR_NAME"
-         # Clean up existing run
-        (cd "$d" && \
-         rm -f Dockerfile && \
-         rm -rf node/template && \
-         # Copy in required files
-         cp ../../quorum/Dockerfile . && \
-         cp -rp ../../template node/ && \
-         # Run docker container
-         docker build -t $IMG_NAME . && \
-         docker run -d --net=host $IMG_NAME)
-    fi
+    DIR_NAME=`echo $d | cut -c3-`
+    IMG_NAME="quorum-$DIR_NAME"
+    (cd "$d" && \
+    # Clean up existing run
+    rm -f Dockerfile && \
+    rm -f start.sh && \
+    # Copy in required files
+    cp ../quorum-node/Dockerfile . && \
+    cp ../quorum-node/start.sh . && \
+    # Run docker container
+    docker build -t $IMG_NAME . && \
+    docker run -d --net=host $IMG_NAME)
 done
