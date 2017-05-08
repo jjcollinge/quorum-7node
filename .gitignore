@@ -1,5 +1,5 @@
 appsettings.json
-example/quorum-node
+quorum-node/
 Dockerfile
 example/**/start.sh
 data
