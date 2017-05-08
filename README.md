@@ -7,7 +7,7 @@ Quorum 7 node is a simple example of how to leverage the [Quorum Node](https://g
 
 2. Allow the example scripts to execute on your machine `chmod +x quorum-7node/example/run.sh`
 
-3. Run the example script `./quorum-7node/example/run.sh`
+3. Run the example script from within the examples folder `cd ./quorum-7node/example/` and `./run.sh`
  **WARNING** The initial build of the quorum-node docker image will take a little while, however, subsequent builds will use the local cache and will be considerably faster.
 
 4. Once complete, you should have 7 running docker containers. These can be viewed by running the command `docker ps`. If you wish to inspect the geth instances running inside the containers, run the following commands:
