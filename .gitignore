@@ -1,7 +1,7 @@
 appsettings.json
 example/quorum-node
 Dockerfile
-start.sh
+example/**/start.sh
 data
 cakeshop/*.war
 cakeshop/*.log
