@@ -14,6 +14,12 @@ Quorum 7 node is a simple example of how to leverage the [Quorum Node](https://g
     1. `docker exec -it <container-id> /bin/bash`
     2. `geth attach temp/data/geth.ipc`
 
-5. (Optional) If you wish to enable the CakeShop dashboard, run the following commands:
-`chmod +x /quorum-7node/cakeshop/init.sh && .//quorum-7node/cakeshop/init.sh 127.0.0.1 &`. This should run through the CakeShop initialisation routine. Once up and running you should see the Cakeship cake ASCII art in the console, you can now browse to http://localhost:8080/cakeshop/ to see the dashboard.
+## CakeShop (Optional)
+[CakeShop](https://github.com/jpmorganchase/cakeshop) can be quickly bolted on to your 7 node deployment by running the following commands.
 
+1. `cd ./quorum-7node/cakeshop && chmod +x ./init.sh && ./init.sh 127.0.0.1` **WARNING** Without redirecting the output this command will hijack your terminal
+
+2. Once the CakeShop setup routine has completed, you should see an ASCII art image of a lion and a cake. Now you can browse to the dashboard on http://localhost:8080/cakeshop
+
+## Web (Optional)
+I am also bolting on a .NET Core Web App as an example. This is currently under development under the `quorum-7node/web/` directory.
