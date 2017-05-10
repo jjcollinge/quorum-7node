@@ -25,6 +25,9 @@ cd ./quorum-7node/example/ && ./run.sh
 ## Run Cakeshop dashboard
 [Cakeshop](https://github.com/jpmorganchase/cakeshop) can be quickly bolted on to your 7 node example by running the following commands.
 
+#### Prerequisites
+* Java 7+
+
 1. Set the permission of the cakeshop script to executable and then invoke the cakeshop initialisation script with the IP address of an accessible geth instance.
 ```
 cd ./quorum-7node/cakeshop && \
