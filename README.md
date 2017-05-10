@@ -29,7 +29,7 @@ cd ./quorum-7node/example/ && ./run.sh
 ```
 cd ./quorum-7node/cakeshop && \
 chmod +x ./init.sh && \
-nohup ./init.sh 127.0.0.1 & 2>> cakeshop.log
+nohup ./init.sh 127.0.0.1 2>> cakeshop.log &
 ```
  **WARNING** The cakeshop initialisation script is configured to use hard coded Geth ports for the 7 node example. If you have modified the Geth ports you will need to manually configure cakeshop using the instruction on the [Cakeshop docs](https://github.com/jpmorganchase/cakeshop).
 
